@@ -19,6 +19,7 @@ const PostDetails = () => {
     const [comment,setComment]=useState("")
     const [loader,setLoader]=useState(false);
     const navigate=useNavigate()
+    let PostPosition=0;
 
     const fetchPost=async()=>{
         setLoader(true)
@@ -101,9 +102,9 @@ const PostDetails = () => {
                     <p>Categories:</p>
                     <div className="flex justify-center items-center space-x-2">
                     {post.categories?.map((c,i)=>(
-                        <>
+                        <div key={PostPosition++}>
                         <div key={i} className="bg-gray-300 rounded-lg px-3 py-1">{c}</div>
-                        </>
+                        </div>
                     ))}
                     </div>
                 </div>
