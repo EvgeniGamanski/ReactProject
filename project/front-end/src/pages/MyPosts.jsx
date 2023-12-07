@@ -21,7 +21,8 @@ const MyPosts = () => {
   const fetchPosts=async()=>{
     setLoader(true)
     try {
-      const res=await axios.get(URL+"/api/posts/user/"+user._id) 
+      const userID=localStorage.getItem("id")
+      const res=await axios.get(URL+"/api/posts/user/"+userID)
       setPosts(res.data)
       if(res.data.length==0){
         setNoResults(true)

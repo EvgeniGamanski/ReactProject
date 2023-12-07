@@ -37,7 +37,6 @@ router.post("/login",async (req,res)=>{
             return res.status(401).json("Wrong credentials!")
         }
         const token=jwt.sign({_id:user._id,username:user.username,email:user.email},process.env.SECRET,{expiresIn:"3d"})
-        console.log("token");
         const {password,...info}=user._doc
         res.cookie("token",token).status(200).json(info)
 
@@ -53,7 +52,6 @@ router.post("/login",async (req,res)=>{
 router.get("/logout",async (req,res)=>{
     try{
         res.clearCookie("token",{sameSite:"none",secure:true}).status(200).send("User logged out successfully!")
-
     }
     catch(err){
         res.status(500).json(err)
@@ -69,6 +67,7 @@ router.get("/refetch", (req,res)=>{
         }
         res.status(200).json(data)
     })
+    
 })
 
 

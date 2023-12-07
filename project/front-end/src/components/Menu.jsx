@@ -15,6 +15,7 @@ const Menu = () => {
         //    console.log(res)
            setUser(null)
            navigate("/login")
+           localStorage.clear()
 
         } catch (err) {
             console.log(err)

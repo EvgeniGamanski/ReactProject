@@ -20,13 +20,13 @@ const Profile = () => {
 
     const fetchProfile=async ()=>{
         try {
-            const res=await axios.get(URL+"/api/users/"+user._id)
+            const userID=localStorage.getItem("id")
+            const res=await axios.get(URL+"/api/users/"+userID)
             setUsername(res.data.username)
             setEmail(res.data.email)
             setPassword(res.data.password)
-
-        } catch (error) {
-            console.log(error)
+        } catch (err) {
+            console.log(err)
         }
     }
 
@@ -56,7 +56,8 @@ const Profile = () => {
 
     const fetchUserPosts=async()=>{
         try {
-            const res=await axios.get(URL+"/api/posts/user/"+user._id)
+            const userID=localStorage.getItem("id")
+            const res=await axios.get(URL+"/api/posts/user/"+userID)
             setPosts(res.data)
             if(res.data.length==0){
                 setNoResults(true)
