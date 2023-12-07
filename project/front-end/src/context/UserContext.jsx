@@ -17,8 +17,8 @@ export function UserContextProvider({children}){
             setUser(res.data)
             localStorage.setItem("id", res.data._id);
         }
-        catch(err){
-            console.log(err)
+        catch(error){
+            console.log("User is not logged in yet!");
         }
     }
 
