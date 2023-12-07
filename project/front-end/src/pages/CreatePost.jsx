@@ -99,7 +99,7 @@ const CreatePost = () => {
 
                     </div>
                 </div>
-                <textarea onChange={(e)=>setDesc(e.target.value)} rows={15} cols={30} className="px-4 py-2 outline-none" name="desc1" placeholder="Enter post description"/>
+                <textarea onChange={(e)=>setDesc(e.target.value)} rows={8} cols={30} className="px-4 py-2 outline-none" name="desc1" placeholder="Enter post description"/>
 
                 <button onClick={handleCreate} className="bg-black w-full md:w-[20%] mx-auto text-white font-semibold px-4 py-2 md:text-xl text-lg">Create</button>
             </form>
