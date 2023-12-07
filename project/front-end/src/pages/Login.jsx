@@ -19,7 +19,7 @@ const Login = () => {
       // console.log(res.data)
       setUser(res.data)
       navigate("/")
-
+      localStorage.setItem("id", res.data._id);
     }
     catch(err){
       setError(true)
