@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
       <>
-      <div className="mt-8 w-full bg-gray-100 px-8 md:px-[500px] flex md:flex-row flex-col space-y-4 md:space-y-0 items-start md:justify-between text-sm md:text-md py-8 shadow-2xl">
+      <div className="mt-8 w-full bg-gray-100 px-8 md:px-[400px] flex md:flex-row flex-col space-y-4 md:space-y-0 items-start md:justify-between text-sm md:text-md py-8 shadow-2xl">
           <div className="flex flex-col text-black">
               <p className="font-semibold">OFFICES</p>
               <p>Street "Abbey Road" 51,</p>

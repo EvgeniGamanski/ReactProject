@@ -9,6 +9,11 @@ const jwt=require('jsonwebtoken')
 router.post("/register",async(req,res)=>{
     try{
         const {username,email,password}=req.body
+        const existUsername = await User.findOne({ username: req.body.username});
+        if(existUsername){
+            alert("Username is already taken!")
+            return;
+        }
         const salt=await bcrypt.genSalt(10)
         const hashedPassword=await bcrypt.hashSync(password,salt)
         const newUser=new User({username,email,password:hashedPassword})
@@ -28,7 +33,7 @@ router.post("/login",async (req,res)=>{
     try{
         const user=await User.findOne({email:req.body.email})
         if(!user){
-            return res.status(404).json("User not found!")
+            return res.status(404).json("User not found!")  
         }
         const match=await bcrypt.compare(req.body.password,user.password)
         
