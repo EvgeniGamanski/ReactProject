@@ -15,7 +15,6 @@ const Profile = () => {
     const {user, setUser}=useContext(UserContext)
     const navigate=useNavigate()
     const [posts,setPosts]=useState([])
-    const [updated,setUpdated]=useState(false)
     const [noResults,setNoResults]=useState(false)
 
     const fetchProfile=async ()=>{
@@ -29,30 +28,6 @@ const Profile = () => {
             console.log(err)
         }
     }
-
-    // const handleUserUpdate=async()=>{
-    //     setUpdated(false)
-    //     try{
-    //         const res=await axios.put(URL+"/api/users/"+user._id,{username,email,password},{withCredentials:true})
-    //         // console.log(res.data)
-    //         setUpdated(true)
-    //     }
-    //     catch(error){
-    //         console.log(error.response.data)
-    //         setUpdated(false)
-    //     }
-    // }
-
-    // const handleUserDelete=async()=>{
-    //     try {
-    //         const res=await axios.delete(URL+"/api/users/"+user._id,{withCredentials:true})
-    //         setUser(null)
-    //         navigate("/")
-    //         // console.log(res.data)
-    //     } catch (error) {
-    //         console.log(error.response.data)
-    //     }
-    // }
 
     const fetchUserPosts=async()=>{
         try {
@@ -99,8 +74,7 @@ const Profile = () => {
                     <p className="outline-none px-4 py-2 text-gray-500" type="text">{email}</p>
                     </ul>
                     <div className="flex items-center space-x-4 mt-8">
-                        {/* <button onClick={handleUserUpdate} className="text-white font-semibold bg-black px-4 py-2 hover:text-black hover:bg-gray-400">Update</button>
-                        <button onClick={handleUserDelete} className="text-white font-semibold bg-black px-4 py-2 hover:text-black hover:bg-gray-400">Delete</button> */}
+                        
                     </div>
                     </div>
                 </div>

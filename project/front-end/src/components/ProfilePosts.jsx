@@ -2,7 +2,7 @@ import { IF } from "../url"
 
 const ProfilePosts = ({p}) => {
     return (
-        <div className="w-full flex mt-8 space-x-4">
+        <div className="w-full flex mt-8 space-x-4 transition duration-300 ease-in-out hover:scale-105">
       {/* left */}
       <div className="w-[35%] h-[200px] flex justify-center items-center">
       <img src={IF+p.photo} alt="" className="scale-125 mt-40 mr-20 object-cover rounded-xl" />
