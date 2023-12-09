@@ -11,14 +11,11 @@ import MyPosts from "./pages/MyPosts"
 import NotFound from "./pages/NotFound"
 import { useEffect, useState, useContext } from "react"
 import { Navigate } from "react-router-dom"
-import { userAuth } from "./AuthCheck"
 
 
 const App = () => {
-  const [user, setUser] = useState([], () => {
-    const localData = localStorage.getItem('id');
-    return localData ? localData : [];
-});
+  const user=localStorage.getItem("id");
+
   const ProtectedRoute = ({ user,children }) => {
   if (user==null) {
    return <Navigate to="/login" replace />;

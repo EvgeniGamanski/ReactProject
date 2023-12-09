@@ -16,6 +16,7 @@ const Menu = () => {
            setUser(null)
            navigate("/login")
            localStorage.clear()
+           window.location.reload(true)
 
         } catch (err) {
             console.log(err)

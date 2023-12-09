@@ -20,6 +20,7 @@ const Login = () => {
       setUser(res.data)
       navigate("/")
       localStorage.setItem("id", res.data._id);
+      window.location.reload(true)
     }
     catch(err){
       setError(true)
