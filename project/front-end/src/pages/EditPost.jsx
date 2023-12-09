@@ -48,14 +48,12 @@ const EditPost = () => {
             data.append("img",filename)
             data.append("file",file)
             post.photo=filename
-            //img upload
             try {
                 const imgUpload=await axios.post(URL+"/api/upload",data)
             } catch (error) {
                 console.error(error.response.data);
             }
         }
-        //post upload
         try{
             const res=await axios.put(URL+"/api/posts/"+postId,post,{withCredentials:true})
             navigate("/posts/post/"+res.data._id)
@@ -113,7 +111,6 @@ const EditPost = () => {
                         <div onClick={addCategory} className="bg-black text-white px-4 py-2 font-semibold cursor-pointer">Add</div>
                     </div>
 
-                    {/* categories */}
                     <div className="flex px-4 mt-3">
                     {cats?.map((c,i)=>( 
                         <div key={i} className="flex justify-center items-center space-x-2 mr-4 bg-gray-200 px-2 py-1 rounded-md">

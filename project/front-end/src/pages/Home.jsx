@@ -1,4 +1,4 @@
-import axios from "axios"
+import axios from "axios" 
 import Footer from "../components/Footer"
 import HomePosts from "../components/HomePosts"
 import Navbar from "../components/Navbar"

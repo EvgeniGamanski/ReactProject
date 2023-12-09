@@ -54,8 +54,6 @@ const PostDetails = () => {
             {comment:comment,author:user.username,postId:postId,userId:user._id},
             {withCredentials:true})
 
-            // fetchPostComments()
-            // setComment("")
             window.location.reload(true)
 
         } catch (error) {
