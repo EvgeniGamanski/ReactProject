@@ -8,7 +8,7 @@ import { Link, useLocation } from "react-router-dom"
 import Loader from '../components/Loader'
 import { UserContext } from "../context/UserContext"
 
-const Home = () => {
+const Home = () => { 
 
   const {search}=useLocation()
   const [posts,setPosts]=useState([])
