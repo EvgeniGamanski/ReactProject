@@ -27,9 +27,7 @@ The logged in user can:
  - Go to My Posts Page
 
 Here are screenshots of the project:
-![image](https://github.com/EvgeniGamanski/ReactProject/assets/114442045/f506e615-44ca-43af-abde-0c1269fc809a)
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-![image](https://github.com/EvgeniGamanski/ReactProject/assets/114442045/bf7be790-7b61-4ec0-93a6-cc185dab2726)
+![image](https://github.com/EvgeniGamanski/ReactProject/assets/114442045/f858904f-6fbc-4f70-a433-cb74226860a0)
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ![image](https://github.com/EvgeniGamanski/ReactProject/assets/114442045/14afa3ac-3d80-4b71-bdf1-7df19804f7aa)
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
